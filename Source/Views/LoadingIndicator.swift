@@ -1,3 +1,4 @@
+#if !os(macOS)
 import UIKit
 
 class LoadingIndicator: UIView {
@@ -29,3 +30,4 @@ class LoadingIndicator: UIView {
     indicator.center = CGPoint(x: bounds.size.width/2, y: bounds.size.height/2)
   }
 }
+#endif

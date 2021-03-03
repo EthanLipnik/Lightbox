@@ -1,3 +1,4 @@
+#if !os(macOS)
 import UIKit
 
 public protocol InfoLabelDelegate: class {
@@ -150,3 +151,4 @@ extension InfoLabel: LayoutConfigurable {
     expanded ? expand() : collapse()
   }
 }
+#endif

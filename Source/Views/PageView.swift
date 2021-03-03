@@ -1,3 +1,4 @@
+#if !os(macOS)
 import UIKit
 
 protocol PageViewDelegate: class {
@@ -241,3 +242,4 @@ extension PageView: UIScrollViewDelegate {
     pageViewDelegate?.pageViewDidZoom(self)
   }
 }
+#endif

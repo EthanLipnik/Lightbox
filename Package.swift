@@ -3,18 +3,23 @@ import PackageDescription
 
 let package = Package(
     name: "Lightbox",
+    platforms: [
+        .iOS(.v9),
+        .tvOS(.v9),
+        .macOS(.v10_11)
+    ],
     products: [
         .library(
             name: "Lightbox",
             targets: ["Lightbox"]),
     ],
     dependencies: [
-      .package(url: "https://github.com/hyperoslo/Imaginary", .branch("master"))
+      .package(url: "https://github.com/SDWebImage/SDWebImage", .branch("master"))
     ],
     targets: [
         .target(
             name: "Lightbox",
-            dependencies: ["Imaginary"],
+            dependencies: ["SDWebImage"],
             path: "Source"
             )
     ],

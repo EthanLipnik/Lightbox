@@ -1,3 +1,4 @@
+#if !os(macOS)
 import UIKit
 
 public protocol LightboxControllerPageDelegate: class {
@@ -466,3 +467,4 @@ extension LightboxController: FooterViewDelegate {
     })
   }
 }
+#endif

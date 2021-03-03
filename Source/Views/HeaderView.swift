@@ -1,3 +1,4 @@
+#if !os(macOS)
 import UIKit
 
 protocol HeaderViewDelegate: class {
@@ -111,3 +112,4 @@ extension HeaderView: LayoutConfigurable {
     )
   }
 }
+#endif

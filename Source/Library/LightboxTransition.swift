@@ -1,3 +1,4 @@
+#if !os(macOS)
 import UIKit
 
 class LightboxTransition: UIPercentDrivenInteractiveTransition {
@@ -171,3 +172,4 @@ extension LightboxTransition: UIGestureRecognizerDelegate {
     return result
   }
 }
+#endif

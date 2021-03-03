@@ -1,5 +1,5 @@
+#if !os(macOS)
 import UIKit
-import Imaginary
 
 open class LightboxImage {
 
@@ -49,3 +49,4 @@ open class LightboxImage {
     }
   }
 }
+#endif

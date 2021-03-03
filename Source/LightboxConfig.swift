@@ -1,7 +1,8 @@
+#if !os(macOS)
 import UIKit
 import AVKit
 import AVFoundation
-import Imaginary
+import SDWebImage
 
 public class LightboxConfig {
   /// Whether to show status bar while Lightbox is presented
@@ -20,15 +21,13 @@ public class LightboxConfig {
   /// How to load image onto UIImageView
   public static var loadImage: (UIImageView, URL, ((UIImage?) -> Void)?) -> Void = { (imageView, imageURL, completion) in
 
-    // Use Imaginary by default
-    imageView.setImage(url: imageURL, placeholder: nil, completion: { result in
-      switch result {
-      case .value(let image):
-        completion?(image)
-      case .error:
-        completion?(nil)
-      }
-    })
+    imageView.sd_setImage(with: imageURL) { (image, error, _, _) in
+        if error != nil {
+            completion?(nil)
+        } else if let image = image {
+            completion?(image)
+        }
+    }
   }
 
   /// Indicator is used to show while image is being fetched
@@ -107,3 +106,4 @@ public class LightboxConfig {
     public static var maximumScale: CGFloat = 3.0
   }
 }
+#endif

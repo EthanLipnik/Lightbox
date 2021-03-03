@@ -1,3 +1,4 @@
+#if !os(macOS)
 import UIKit
 
 internal extension UIColor {
@@ -25,3 +26,4 @@ internal extension UIColor {
             blue:  CGFloat((Int(hex, radix: 16)!) & 0xFF) / 255.0, alpha: 1.0)
     }
 }
+#endif

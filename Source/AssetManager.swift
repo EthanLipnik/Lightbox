@@ -1,3 +1,4 @@
+#if !os(macOS)
 import UIKit
 
 /// Used to load assets from Lightbox bundle
@@ -8,3 +9,4 @@ class AssetManager {
     return UIImage(named: "Lightbox.bundle/\(named)", in: bundle, compatibleWith: nil)
   }
 }
+#endif

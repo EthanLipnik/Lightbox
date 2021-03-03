@@ -1,3 +1,4 @@
+#if !os(macOS)
 import UIKit
 
 @UIApplicationMain
@@ -15,4 +16,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return true
   }
 }
-
+#endif

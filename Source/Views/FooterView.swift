@@ -1,3 +1,4 @@
+#if !os(macOS)
 import UIKit
 
 public protocol FooterViewDelegate: class {
@@ -123,3 +124,4 @@ extension FooterView: InfoLabelDelegate {
     delegate?.footerView(self, didExpand: expanded)
   }
 }
+#endif

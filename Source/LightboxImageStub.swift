@@ -1,3 +1,4 @@
+#if !os(macOS)
 import UIKit
 
 internal class LightboxImageStub: LightboxImage {
@@ -8,3 +9,4 @@ internal class LightboxImageStub: LightboxImage {
   }
 
 }
+#endif
